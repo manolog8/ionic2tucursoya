@@ -8,6 +8,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListaCursosPageModule } from '../pages/lista-cursos/lista-cursos.module';
 import { ProviderCursosProvider } from '../providers/provider-cursos/provider-cursos';
+import { HttpClientModule } from '@angular/common/http';
+import { DetalleCursoPageModule } from '../pages/detalle-curso/detalle-curso.module';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { ProviderCursosProvider } from '../providers/provider-cursos/provider-cu
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ListaCursosPageModule
+    HttpClientModule,
+    ListaCursosPageModule,
+    DetalleCursoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

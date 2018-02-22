@@ -1,18 +1,18 @@
 {
   "results": [
     {
-      "numeroCurso": "1P",
+      "numeroCurso": 1,
       "nombreCurso": "Angular.io",
       "descripcionCurso": "Angular.io",
       "precioCurso": 200000,
-      "imagenCurso": ""
+      "imagenCurso": "assets/imgs/angular.png"
     },
     {
-      "numeroCurso": "2P",
+      "numeroCurso": 2,
       "nombreCurso": "Ionic2",
       "descripcionCurso": "Ionic2",
       "precioCurso": 100000,
-      "imagenCurso": ""
+      "imagenCurso": "assets/imgs/ionic.png"
     }
   ]
 }

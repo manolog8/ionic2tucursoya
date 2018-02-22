@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Curso } from '../../model/curso';
+import { Curso } from '../../model/Curso';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/Observable/of';
 
 /*
   Generated class for the ProviderCursosProvider provider.
@@ -19,7 +20,8 @@ export class ProviderCursosProvider {
 
   getListaCursos(): Observable<Curso[]> {
     return this.http.get('assets/cursos.json')
-      .map((json: Curso[]) => json);
+      .map((json: any) => json.results)
+      .map((results: Curso[]) => results);
   }
 
 }

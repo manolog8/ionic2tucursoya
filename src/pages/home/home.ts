@@ -12,7 +12,6 @@ export class HomePage {
 
   }
 
-
   getListaCursos() {
     this.navCtrl.push(ListaCursosPage);
   }

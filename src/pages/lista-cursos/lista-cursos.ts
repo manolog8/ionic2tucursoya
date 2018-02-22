@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { Curso } from '../../model/Curso';
 import { ProviderCursosProvider } from '../../providers/provider-cursos/provider-cursos';
+import { DetalleCursoPage } from '../detalle-curso/detalle-curso';
 
 /**
  * Generated class for the ListaCursosPage page.
@@ -19,7 +20,7 @@ export class ListaCursosPage {
 
   cursos: Curso[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public providerCursosProvider: ProviderCursosProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public providerCursosProvider: ProviderCursosProvider,public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -29,7 +30,13 @@ export class ListaCursosPage {
     });
   }
 
+  verCurso(curso: Curso[]) {
+    let modal = this.modalCtrl.create(DetalleCursoPage, { curso: Curso });
+    modal.present();
+  }
 
-}
+  enviarCarrito(curso: Curso[]) {
+    return null;
+  }
 
 }
