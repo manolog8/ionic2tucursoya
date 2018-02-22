@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage,  NavParams, ViewController } from 'ionic-angular';
 import { Curso } from '../../model/Curso';
 
 /**
@@ -18,12 +18,17 @@ export class DetalleCursoPage {
 
   curso: Curso;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public viewCtrl: ViewController, public navParams: NavParams) {
     this.curso = this.navParams.get("curso");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetalleCursoPage');
   }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
+ 
 
 }

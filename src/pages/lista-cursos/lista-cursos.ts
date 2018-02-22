@@ -20,7 +20,7 @@ export class ListaCursosPage {
 
   cursos: Curso[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public providerCursosProvider: ProviderCursosProvider,public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public providerCursosProvider: ProviderCursosProvider, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -31,12 +31,13 @@ export class ListaCursosPage {
   }
 
   verCurso(curso: Curso[]) {
-    let modal = this.modalCtrl.create(DetalleCursoPage, { curso: Curso });
+    let modal = this.modalCtrl.create(DetalleCursoPage, { curso: curso });
     modal.present();
   }
 
   enviarCarrito(curso: Curso[]) {
     return null;
   }
+
 
 }

@@ -7,14 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>detalle-curso</ion-title>
+    <ion-title>detalle-curso
+      <ion-icon name="checkmark-circle-outline" (click)="dismiss()" float-right></ion-icon>
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-  Detalle
-{{curso.nombreCurso}}
-
+<ion-content padding class="card-background-page">
+  <ion-card>
+    <img [src]="curso.imagenCurso" />
+    <div class="card-title">{{curso.nombreCurso}}</div>
+    <div class="card-subtitle">{{curso.descripcionCurso}}</div>
+  </ion-card>
 </ion-content>
