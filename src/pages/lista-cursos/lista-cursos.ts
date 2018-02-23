@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 import { Curso } from '../../model/Curso';
 import { ProviderCursosProvider } from '../../providers/provider-cursos/provider-cursos';
 import { DetalleCursoPage } from '../detalle-curso/detalle-curso';
+import { CarritoPage } from '../carrito/carrito';
 
 /**
  * Generated class for the ListaCursosPage page.
@@ -36,7 +37,7 @@ export class ListaCursosPage {
   }
 
   enviarCarrito(curso: Curso[]) {
-    return null;
+    this.navCtrl.push(CarritoPage, { curso: curso });
   }
 
 

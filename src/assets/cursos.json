@@ -3,14 +3,14 @@
     {
       "numeroCurso": 1,
       "nombreCurso": "Angular.io",
-      "descripcionCurso": "Angular.io",
+      "descripcionCurso": "Aprenda una forma de crear aplicaciones con Angular y reutilice su código y capacidades para crear aplicaciones para cualquier destino de despliegue. Para web, web móvil, dispositivo móvil nativo y escritorio nativo.",
       "precioCurso": 200000,
       "imagenCurso": "assets/imgs/angular.png"
     },
     {
       "numeroCurso": 2,
       "nombreCurso": "Ionic2",
-      "descripcionCurso": "Ionic2",
+      "descripcionCurso": "Ionic es un SDK completo de código abierto para el desarrollo de aplicaciones móviles híbridas. Las versiones más recientes, conocidas como Ionic 2 o simplemente Ionic, están basadas en Angular.",
       "precioCurso": 100000,
       "imagenCurso": "assets/imgs/ionic.png"
     }

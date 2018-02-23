@@ -14,9 +14,6 @@
 
 
 <ion-content padding>
-  Lista
-
-
   <ion-list>
     <ion-item-sliding #slidingItem *ngFor="let curso of cursos">
 
@@ -26,7 +23,9 @@
             <ion-img width="80" height="80" [src]="curso.imagenCurso"></ion-img>
           </ion-col>
           <ion-col col-3 padding text-center>
-            {{curso.nombreCurso}}
+            <ion-card-title>
+              {{curso.nombreCurso}}
+            </ion-card-title>
             <br> {{curso.precioCurso|currency}}
           </ion-col>
 
@@ -35,7 +34,11 @@
       </ion-item>
       <ion-item-options side="left">
         <button ion-button color="primary" (click)="verCurso(curso)">Detalle</button>
-        <button ion-button color="danger" (click)="enviarCarrito(curso)">Carrito</button>
+        <button ion-button color="danger" (click)="enviarCarrito(curso)">
+          Agregar
+          <br>
+          <ion-icon name="card"></ion-icon>
+        </button>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>

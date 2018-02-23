@@ -4,7 +4,11 @@ export class Curso {
         public nombreCurso: string,
         public descripcionCurso: string,
         public precioCurso: number,
-        public imagenCurso: string        
+        public imagenCurso: string
+    ) {
+    }
+    Curso(
+
     ) {
     }
 }
