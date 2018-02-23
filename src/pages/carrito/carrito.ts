@@ -29,7 +29,6 @@ export class CarritoPage {
         this.totalCursos.push(value)
       })
     });
-
   }
 
   ionViewDidLoad() {
@@ -48,6 +47,10 @@ export class CarritoPage {
   delCurso(curso: Curso, index: any) {
     this.storage.remove(this.curso.nombreCurso.toString());
     this.totalCursos.splice(index, 1);
+  }
+
+  comprarCurso() {
+
   }
 
 }

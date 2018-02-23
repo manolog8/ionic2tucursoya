@@ -21,7 +21,7 @@ export class ListaCursosPage {
 
   cursos: Curso[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public providerCursosProvider: ProviderCursosProvider, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public providerCursosProvider: ProviderCursosProvider, public modalCtrl: ModalController,private storage: Storage) {
   }
 
   ionViewDidLoad() {
@@ -40,5 +40,12 @@ export class ListaCursosPage {
     this.navCtrl.push(CarritoPage, { curso: curso });
   }
 
+  getValorCursos() {
+    let total = 0;
+    this.storage.forEach((value, key, index) => {
+      total += value.precioCurso;
+    })
+    return total;
+  }
 
 }
