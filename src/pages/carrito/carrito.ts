@@ -50,7 +50,7 @@ export class CarritoPage {
   }
 
   comprarCurso() {
-
+    return "";
   }
 
 }

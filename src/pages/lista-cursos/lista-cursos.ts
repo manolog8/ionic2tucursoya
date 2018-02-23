@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { Curso } from '../../model/Curso';
 import { ProviderCursosProvider } from '../../providers/provider-cursos/provider-cursos';
@@ -19,9 +20,11 @@ import { CarritoPage } from '../carrito/carrito';
 })
 export class ListaCursosPage {
 
+  valorCursos: number = 0;
   cursos: Curso[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public providerCursosProvider: ProviderCursosProvider, public modalCtrl: ModalController,private storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public providerCursosProvider: ProviderCursosProvider, public modalCtrl: ModalController, private storage: Storage) {
+
   }
 
   ionViewDidLoad() {
@@ -29,7 +32,17 @@ export class ListaCursosPage {
       console.log(d);
       this.cursos = d;
     });
+
   }
+
+  ionViewCanEnter() {
+    this.valorCursos=0;
+    this.storage.forEach((value, key, index) => {
+      this.valorCursos += value.precioCurso;
+    })
+  }
+
+
 
   verCurso(curso: Curso[]) {
     let modal = this.modalCtrl.create(DetalleCursoPage, { curso: curso });
@@ -39,13 +52,4 @@ export class ListaCursosPage {
   enviarCarrito(curso: Curso[]) {
     this.navCtrl.push(CarritoPage, { curso: curso });
   }
-
-  getValorCursos() {
-    let total = 0;
-    this.storage.forEach((value, key, index) => {
-      total += value.precioCurso;
-    })
-    return total;
-  }
-
 }

@@ -16,8 +16,8 @@
 <ion-content padding>
   <ion-item>
     <ion-icon name="albums" item-start></ion-icon>
-    Comprar Cursos
-    <ion-badge item-end>{{getValorCursos()}}</ion-badge>
+    Adquirir cursos
+    <ion-badge item-end>{{valorCursos|currency}}</ion-badge>
   </ion-item>
   <ion-list>
     <ion-item-sliding #slidingItem *ngFor="let curso of cursos">
