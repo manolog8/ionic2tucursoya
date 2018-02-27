@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { Curso } from '../../model/Curso';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the CarritoPage page.
@@ -49,8 +50,8 @@ export class CarritoPage {
     this.totalCursos.splice(index, 1);
   }
 
-  comprarCurso() {
-    return "";
+  comprarCurso(valorCursos: number) {
+    this.navCtrl.push(LoginPage, { valorCursos: valorCursos });
   }
 
 }

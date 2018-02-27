@@ -12,6 +12,8 @@ import { ProviderCursosProvider } from '../providers/provider-cursos/provider-cu
 import { HttpClientModule } from '@angular/common/http';
 import { DetalleCursoPageModule } from '../pages/detalle-curso/detalle-curso.module';
 import { CarritoPageModule } from '../pages/carrito/carrito.module';
+import { LoginPageModule } from '../pages/login/login.module';
+import { MapaUbicacionPageModule } from '../pages/mapa-ubicacion/mapa-ubicacion.module';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { CarritoPageModule } from '../pages/carrito/carrito.module';
     HttpClientModule,
     ListaCursosPageModule,
     DetalleCursoPageModule,
-    CarritoPageModule
+    CarritoPageModule,
+    LoginPageModule,
+    MapaUbicacionPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,8 +40,8 @@ import { CarritoPageModule } from '../pages/carrito/carrito.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     ProviderCursosProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }
