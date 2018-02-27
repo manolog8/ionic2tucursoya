@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Geolocation } from '@ionic-native/geolocation';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -15,7 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MapaUbicacionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  latitude: number;
+  longitude: number;
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public geolocationPlugging: Geolocation) {
+    this.geolocationPlugging.getCurrentPosition().then((resp) => {
+      this.latitude = resp.coords.latitude;
+      this.longitude = resp.coords.longitude;
+    }).catch((error) => {
+      console.log('Error getting location', error);
+    });
   }
 
   ionViewDidLoad() {
