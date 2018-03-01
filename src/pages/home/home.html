@@ -9,9 +9,20 @@
 <ion-content padding>
 
   <h3>Bienvenido</h3>
-  <p>Tenemos la mejor oferta de cursos, en la comodidad de su casa o su lugar de trabajo</p>
-
-  <button ion-button icon-left (click)="getListaCursos()">
+  
+  <ion-card>
+  <img src="assets/imgs/programacion.png"/>
+  <ion-card-content>
+    <ion-card-title>
+      Bienvenido
+      </ion-card-title>
+    <p>
+     Con el curso de programación básica, aprende a programar desde cero, domina Javascript, entiende HTML y aprende de algoritmos. Aprenderás la lógica del código, cómo piensan los programadores y cómo programar juegos, proyectos y hasta robots y electrónica.
+    </p>
+  </ion-card-content>
+</ion-card>
+  
+  <button ion-button icon-left (click)="getListaCursos()" full>
     <ion-icon name="apps"></ion-icon>
     Nuestros Cursos
   </button>

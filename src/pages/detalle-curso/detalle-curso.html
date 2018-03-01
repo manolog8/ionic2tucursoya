@@ -20,17 +20,10 @@
       <ion-card-title>
         {{curso.nombreCurso}}
         <ion-badge float-right> {{curso.precioCurso|currency}}</ion-badge>
-
       </ion-card-title>
       <p text-justify>
         {{curso.descripcionCurso}}
       </p>
-
-      <button color="secondary" (click)="enviarCarrito(curso)" ion-button icon-right small>
-        Agregar
-        <ion-icon name="card"></ion-icon>
-      </button>
     </ion-card-content>
-
   </ion-card>
 </ion-content>

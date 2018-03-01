@@ -43,7 +43,6 @@ export class ListaCursosPage {
   }
 
 
-
   verCurso(curso: Curso[]) {
     let modal = this.modalCtrl.create(DetalleCursoPage, { curso: curso });
     modal.present();

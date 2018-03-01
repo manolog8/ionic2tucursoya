@@ -14,6 +14,7 @@ import { DetalleCursoPageModule } from '../pages/detalle-curso/detalle-curso.mod
 import { CarritoPageModule } from '../pages/carrito/carrito.module';
 import { LoginPageModule } from '../pages/login/login.module';
 import { MapaUbicacionPageModule } from '../pages/mapa-ubicacion/mapa-ubicacion.module';
+
 import { Geolocation } from '@ionic-native/geolocation';
 
 
@@ -44,6 +45,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ProviderCursosProvider,
     Geolocation
+
   ]
 })
 export class AppModule { }

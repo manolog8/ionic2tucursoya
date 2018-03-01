@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavParams, ViewController, NavController } from 'ionic-angular';
 import { Curso } from '../../model/Curso';
-import { CarritoPage } from '../carrito/carrito';
 
 /**
  * Generated class for the DetalleCursoPage page.
@@ -31,9 +30,4 @@ export class DetalleCursoPage {
     this.viewCtrl.dismiss();
   }
 
-  enviarCarrito(curso: Curso[]) {
-    this.navCtrl.push(CarritoPage, { curso: curso });
   }
-
-
-}
