@@ -14,40 +14,44 @@
 
 
 <ion-content padding>
-	
+
   <ion-card>
-	<img src="assets/imgs/cursos.jpg" alt="Tu curso ya">
-    <div class="card-title">Para continuar cn la compra</div>
-    <div class="card-subtitle">Ingrese sus credenciales</div>
+    <img src="assets/imgs/cursos.jpg" alt="Tu curso ya">
+    <ion-card-header>
+      Para continuar cn la compra
+    </ion-card-header>
+    <ion-card-content>
+      Ingrese sus credenciales
+    </ion-card-content>
   </ion-card>
-  
-    <form #loginForm="ngForm" novalidate>
-      <ion-list no-lines>
-        <ion-item>
-          <ion-label stacked color="primary">Usuario</ion-label>
-          <ion-input [(ngModel)]="login.usuario" name="usuario" type="text" #usuario="ngModel" spellcheck="false" autocapitalize="off"
-            required>
-          </ion-input>
-        </ion-item>
-        <p ion-text [hidden]="usuario.valid || submitted == false" color="danger" padding-left>
-          Username is required
-        </p>
-  
-        <ion-item>
-          <ion-label stacked color="primary">Password</ion-label>
-          <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
-          </ion-input>
-        </ion-item>
-        <p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
-          Password is required
-        </p>
-      </ion-list>
-  
-      <ion-row responsive-sm>
-        <ion-col>
-          <button ion-button (click)="onLogin(loginForm)" type="submit" block>Login</button>
-        </ion-col>
-      </ion-row>
-    </form>
+
+  <form #loginForm="ngForm" novalidate>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label stacked color="primary">Usuario</ion-label>
+        <ion-input [(ngModel)]="login.usuario" name="usuario" type="text" #usuario="ngModel" spellcheck="false" autocapitalize="off"
+          required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="usuario.valid || submitted == false" color="danger" padding-left>
+        Username is required
+      </p>
+
+      <ion-item>
+        <ion-label stacked color="primary">Password</ion-label>
+        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+        Password is required
+      </p>
+    </ion-list>
+
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="onLogin(loginForm)" type="submit" block>Login</button>
+      </ion-col>
+    </ion-row>
+  </form>
 
 </ion-content>
