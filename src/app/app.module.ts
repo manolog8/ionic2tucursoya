@@ -16,7 +16,8 @@ import { LoginPageModule } from '../pages/login/login.module';
 import { MapaUbicacionPageModule } from '../pages/mapa-ubicacion/mapa-ubicacion.module';
 
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -44,8 +45,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ProviderCursosProvider,
-    Geolocation
-
+    Geolocation,
+    LocalNotifications,
+    Camera
   ]
 })
 export class AppModule { }
